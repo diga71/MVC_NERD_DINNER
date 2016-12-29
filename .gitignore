@@ -1,0 +1,9 @@
+/NerdDinnerRazor/obj
+/NerdDinnerRazor/bin
+
+/NerdDinnerRazor.Tests/obj
+/NerdDinnerRazor.Tests/bin
+
+
+*.suo
+*.user

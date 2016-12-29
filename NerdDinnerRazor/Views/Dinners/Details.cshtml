@@ -1,0 +1,81 @@
+﻿@model NerdDinnerRazor.Models.Dinner
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Dinner</legend>
+
+    <div class="display-label">
+        @{string ciccio = "Ciao";}
+        @ciccio
+         @*@Html.DisplayNameFor(model => model.Title)*@
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EventDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EventDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HostedBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HostedBy)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactPhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactPhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Country)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Latitude)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Latitude)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Longitude)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Longitude)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.DinnerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
