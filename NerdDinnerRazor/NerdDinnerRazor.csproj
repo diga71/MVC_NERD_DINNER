@@ -335,6 +335,7 @@
     <Content Include="Views\Dinners\Details.cshtml" />
     <Content Include="Views\Dinners\Index.cshtml" />
     <Content Include="Views\Dinners\Edit.cshtml" />
+    <Content Include="Views\Dinners\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
