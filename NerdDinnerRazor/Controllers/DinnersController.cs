@@ -62,5 +62,36 @@ namespace NerdDinnerRazor.Controllers
                 return View(dinner);
             }
         }
+
+        public ActionResult Create()
+        {
+            Dinner dn = new Dinner()
+            {
+                EventDate = DateTime.Now.AddDays(1)
+            };
+            return View(dn);
+        }
+
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Create(Dinner dinner)
+        {
+            try
+            {
+                UpdateModel(dinner);
+                dinnerRepository.Add(dinner);
+                dinnerRepository.Save();
+                return RedirectToAction("Details", new { id = dinner.DinnerID });
+            }
+            catch (Exception err)
+            {
+                String msg = err.ToString();
+                foreach (var issue in dinner.GetRuleViolations())
+                {
+                    ModelState.AddModelError(issue.PropertyName, issue.ErrorMessage);
+                }
+                return View(dinner);
+            }
+        }
+
     }
 }
