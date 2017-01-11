@@ -93,5 +93,19 @@ namespace NerdDinnerRazor.Controllers
             }
         }
 
+        /// <summary>
+        /// Get
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult Delete(int id)
+        {
+            Dinner target = dinnerRepository.GetDinner(id);
+            if (target == null)
+            {
+                return View("NotFound");
+            }
+            return View(target);
+        }
     }
 }
